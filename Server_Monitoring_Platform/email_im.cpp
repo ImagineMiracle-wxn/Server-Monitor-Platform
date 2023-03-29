@@ -67,12 +67,6 @@ void Email_IM::MailSendSlot()
         }
     }
 
-    /*
-    this->Smtp_IM(QString("wangxiaonan@iicit.net"), message, QString("尊贵的测试用户"), QString("服务器日常通知"));
-    this->Smtp_IM(QString("wangpengchao@iicit.net"), message, QString("尊贵的测试用户"), QString("服务器日常通知"));
-    this->Smtp_IM(QString("zhenglinji@iicit.net"), message, QString("尊贵的测试用户"), QString("服务器日常通知"));
-    */
-
 }
 
 void Email_IM::SendUrgentMail(int level, int id)
@@ -118,13 +112,6 @@ void Email_IM::SendUrgentMail(int level, int id)
             this->Smtp_IM(this->recvEmailList->at(i), message, QString("尊贵的订阅用户"), QString("紧急通知邮件！！"));
         }
     }
-
-    /*
-    this->Smtp_IM(QString("wangxiaonan@iicit.net"), message, QString("尊贵的测试用户"), QString("紧急通知邮件！！"));
-    this->Smtp_IM(QString("wangpengchao@iicit.net"), message, QString("尊贵的测试用户"), QString("紧急通知邮件！！"));
-    this->Smtp_IM(QString("zhenglinji@iicit.net"), message, QString("尊贵的测试用户"), QString("紧急通知邮件！！"));
-    */
-
     // 紧急邮件开锁
     if (this->urgentMutex) {
         *this->urgentMutex = true;
@@ -193,13 +180,6 @@ void Email_IM::SendPowerDownMail()
             this->Smtp_IM(this->recvEmailList->at(i), message, QString("尊贵的订阅用户"), QString("风险解除通知: 高温机器已关机"));
         }
     }
-
-    /*
-    this->Smtp_IM(QString("wangxiaonan@iicit.net"), message, QString("尊贵的测试用户"), QString("风险解除通知: 高温机器已关机"));
-    this->Smtp_IM(QString("wangpengchao@iicit.net"), message, QString("尊贵的测试用户"), QString("风险解除通知: 高温机器已关机"));
-    this->Smtp_IM(QString("zhenglinji@iicit.net"), message, QString("尊贵的测试用户"), QString("风险解除通知: 高温机器已关机"));
-    */
-
     // 紧急邮件开锁
     if (this->urgentMutex) {
         *this->urgentMutex = true;
@@ -303,19 +283,6 @@ void Email_IM::GabageCollectionForEmail()
 bool Email_IM::Smtp_IM(const QString &contact, QString msg, const QString &name, const QString &subject)
 {
     bool ret = false;
-
-    /*
-#ifdef OUTLOOKMAIL
-    // 选择微软 outlook 邮箱发送
-    this->InitEmail(QString("iicit.wuxi@outlook.com"), QString("IICIT 服务器助手"), contact, name, subject);
-#endif  //OUTLOOKMAIL
-
-#ifdef TENCENTMAIL
-    // 选用腾讯企业微信邮箱发送
-    this->InitEmail(QString("wangxiaonan@iicit.net"), QString("IICIT 服务器助手"), contact, name, subject);
-#endif  // TENCENTMAIL
-    */
-
     this->InitEmail(masterEmailAddress, masterName, contact, name, subject);
 
     ret = this->SendEmail(msg);
