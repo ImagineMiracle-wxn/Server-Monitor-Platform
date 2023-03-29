@@ -189,24 +189,14 @@ void MonitoringPlatform_IM::Init_Email_IM()
 void MonitoringPlatform_IM::Init_MonitorThread()
 {
     //************************待监测服务器信息添加处********************************
-    this->AddServerToList("10.1.3.120", "王鹏超", "王潇南", "Server30-120");
-    this->AddServerToList("10.1.3.121", "郭非", "王潇南", "Server30-121");
-    this->AddServerToList("10.1.3.122", "杨鸿伟", "王潇南", "Server30-122");
-    this->AddServerToList("10.1.3.123", "汪涛", "王潇南", "Server30-123");
-    this->AddServerToList("10.1.3.124", "温宏伟", "王潇南", "Server30-124");
-    this->AddServerToList("10.1.3.125", "于大鑫", "王潇南", "Server30-125");
-    this->AddServerToList("10.1.3.126", "沙江", "王潇南", "Server30-126");
+    this->AddServerToList("10.1.3.120", "苏小轼", "凌云霄", "Server30-120");
+    this->AddServerToList("10.1.3.121", "李小白", "凌云霄", "Server30-121");
+    this->AddServerToList("10.1.3.122", "杜小甫", "凌云霄", "Server30-122");
+    this->AddServerToList("10.1.3.123", "苏小辙", "凌云霄", "Server30-123");
+    this->AddServerToList("10.1.3.124", "韩小愈", "凌云霄", "Server30-124");
+    this->AddServerToList("10.1.3.125", "苏小洵", "凌云霄", "Server30-125");
+    this->AddServerToList("10.1.3.126", "曾小巩", "凌云霄", "Server30-126");
     /*
-    //------------------------测评实验室
-    this->AddServerToList("10.11.0.102", "姜兴宇", "张晓雪", "Server11-102");
-    this->AddServerToList("10.11.0.103", "郑珂威", "张晓雪", "Server11-103");
-    this->AddServerToList("10.11.0.104", "郑珂威", "张晓雪", "Server11-104");
-    this->AddServerToList("10.11.0.105", "张晓雪", "张晓雪", "Server11-105");
-    this->AddServerToList("10.11.0.106", "张晓雪", "张晓雪", "Server11-106");
-    this->AddServerToList("10.11.0.107", "姜兴宇", "张晓雪", "Server11-107");
-    this->AddServerToList("10.11.0.108", "罗之丹", "张晓雪", "Server11-108");
-     */
-    //**************************************************************************
     // 初始化监控线程
     qDebug() << "[MonitoringPlatform]:" << "ThreadList Count=" << this->threadList.count() << "\n";
 
