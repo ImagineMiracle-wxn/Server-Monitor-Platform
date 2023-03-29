@@ -196,7 +196,6 @@ void MonitoringPlatform_IM::Init_MonitorThread()
     this->AddServerToList("10.1.3.124", "韩小愈", "凌云霄", "Server30-124");
     this->AddServerToList("10.1.3.125", "苏小洵", "凌云霄", "Server30-125");
     this->AddServerToList("10.1.3.126", "曾小巩", "凌云霄", "Server30-126");
-    /*
     // 初始化监控线程
     qDebug() << "[MonitoringPlatform]:" << "ThreadList Count=" << this->threadList.count() << "\n";
 
