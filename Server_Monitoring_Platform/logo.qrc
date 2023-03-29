@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/ico">
+        <file>ico/Server_MonitoringPlatform.ico</file>
+        <file>ico/email.ico</file>
+        <file>ico/about.ico</file>
+        <file>ico/add.ico</file>
+        <file>ico/del.ico</file>
+        <file>ico/Link.ico</file>
+    </qresource>
+</RCC>

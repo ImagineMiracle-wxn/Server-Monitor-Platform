@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MonitoringPlatform_IM</class>
+ <widget class="QWidget" name="MonitoringPlatform_IM">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MonitoringPlatform_IM</string>
+  </property>
+  <widget class="QLCDNumber" name="LcdNum_DateTime">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>549</y>
+     <width>461</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="digitCount">
+    <number>25</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_SystemRunTime">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>500</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="text">
+    <string>程序已运行88天88小时88分</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CheckBox_Email_En">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>560</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>邮件通知</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

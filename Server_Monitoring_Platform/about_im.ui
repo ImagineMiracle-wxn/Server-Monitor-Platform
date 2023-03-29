@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>About_IM</class>
+ <widget class="QWidget" name="About_IM">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="Lab_Logo">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>35</y>
+     <width>100</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppName">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>30</y>
+     <width>52</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>软件名：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppVersionNumber">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>60</y>
+     <width>52</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>版本号：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppAuthor">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>120</y>
+     <width>30</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>作者：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppTime">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>90</y>
+     <width>52</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>发布时间：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppNote">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>30</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>描述：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppNameV">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>30</y>
+     <width>141</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>服务器状态监测通知助手</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppVersionV">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>60</y>
+     <width>170</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>V1.4.Release.CN.b*******</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppTimeV">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>90</y>
+     <width>161</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2023年*********</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppAuthorV">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imagine Miracle</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Lab_AppNoteV">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>361</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imagine Miracle</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
