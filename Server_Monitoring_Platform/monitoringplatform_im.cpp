@@ -189,6 +189,7 @@ void MonitoringPlatform_IM::Init_Email_IM()
 void MonitoringPlatform_IM::Init_MonitorThread()
 {
     //************************待监测服务器信息添加处********************************
+    //**********服务器信息：<IP Address>,  <User>, <Admin>, <Server Name>
     this->AddServerToList("10.1.3.120", "苏小轼", "凌云霄", "Server30-120");
     this->AddServerToList("10.1.3.121", "李小白", "凌云霄", "Server30-121");
     this->AddServerToList("10.1.3.122", "杜小甫", "凌云霄", "Server30-122");
