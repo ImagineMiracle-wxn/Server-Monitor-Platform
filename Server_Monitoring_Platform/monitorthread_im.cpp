@@ -2,7 +2,7 @@
 
 MonitorThread_IM::MonitorThread_IM(int id, bool isexit, QList<int> *mailtime, ServerDetail_IM *server, QLabel *lab, bool *mutex, bool *displaymutex) :
     threadID(id), isExit(isexit), eMailTime(mailtime), serverDetail(server), displayLab(lab), socket(nullptr), messageInit(true),
-    messageChange(false), isRisk(false), isRiskDisplay(false), riskCount(0), riskLevel(0), urgentMutex(mutex), displayMutex(displaymutex)
+    messageChange(false), isRisk(false), isRiskDisplay(false), riskCount(0), riskLevel(0), urgentMutex(mutex), displayMutex(displaymutex), disconnectCountor(0)
 {
     // 初始化显示当前服务器信息
     this->displayLab->setText("服务器: " + serverDetail->hostName + "    状态: 已关机"
@@ -252,18 +252,25 @@ void MonitorThread_IM::run()
         // 服务器掉线状态
         else {
 
-            //qDebug() << "MonitorThread[" << this->threadID << "]:" << "Reconnecting...\n";
-            this->displayLab->setText("服务器: " + serverDetail->hostName + "    状态: 失去连接，请及时联系管理员..."
-                                      + "    用户: " + serverDetail->userName);
-            /*
-            this->socket->disconnectFromHost();
-            this->socket->waitForDisconnected(200);
-            */
-            // TODO: 实现断线重连
-            /*
-            this->socket->connectToHost(QHostAddress(serverDetail->tcpIPv4), serverDetail->tcpPort.toInt());
-            this->serverDetail->serverState.tcpConnectStatus = this->socket->waitForConnected(500);
-            */
+            if (this->disconnectCountor > 100) {
+                this->displayLab->setText("服务器: " + serverDetail->hostName + "    状态: 已关机"
+                                          + "    用户: " + serverDetail->userName);
+            } else {
+
+                //qDebug() << "MonitorThread[" << this->threadID << "]:" << "Reconnecting...\n";
+                this->displayLab->setText("服务器: " + serverDetail->hostName + "    状态: 失去连接，请及时联系管理员..."
+                                          + "    用户: " + serverDetail->userName);
+                this->disconnectCountor++;
+                /*
+                this->socket->disconnectFromHost();
+                this->socket->waitForDisconnected(200);
+                */
+                // TODO: 实现断线重连
+                /*
+                this->socket->connectToHost(QHostAddress(serverDetail->tcpIPv4), serverDetail->tcpPort.toInt());
+                this->serverDetail->serverState.tcpConnectStatus = this->socket->waitForConnected(500);
+                */
+            }
 
         }
 
@@ -364,6 +371,7 @@ void MonitorThread_IM::ConnectedSuccessful()
     this->serverDetail->serverState.tcpConnectStatus = true;
     this->serverDetail->powerStatus = true;     // 连接成功，显示机器为运行状态（监控软件）
     this->messageInit = true;
+    this->disconnectCountor = 0;
 
     this->socket->write(QString(INITSERVER_CMD).toUtf8().data());
     return ;

@@ -84,6 +84,7 @@ private:
 
     double lastTemperature; // 记录上一次温度值，用于监测服务器异常关机
     int noChangeCountor;    // 状态无变化计数器，累计 10 次状态相同，判定服务器异常关机
+    int disconnectCountor;  // 断开连接计数器
 };
 
 #endif // MONITORTHREAD_IM_H
